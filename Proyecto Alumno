@@ -1,0 +1,107 @@
+   /******************************************************************************
+    Proyecto Alumno
+    Nombre: Elisa Michelle Medina Vazquez y Ailyn Yahaira Vega Gomez
+    Fecha: 18052022
+    *******************************************************************************/
+    #include <iostream>
+    using namespace std;
+    int main (void){
+    int eleccion;
+    string nombre,matricula,especialidad;
+    string nombres[5];
+    string matriculas[5];
+    char especialidades[5];
+    float proyectoAlumnos;
+    char esp;
+    string P,M;
+    string opp;
+   
+    do{
+        cout<<"Seleccione el numero de la opcion que quiere realizar: " <<endl;
+        cout<<"\n1) Alta"<<endl;
+        cout<<"\n2) Consulta"<<endl;
+        cout<<"\n3) Listado"<<endl;
+        cout<<"\n4) Salir"<<endl;
+        cin>>eleccion;
+       
+     switch(eleccion){
+     case 1:
+     for (int i = 0; i < 5; i++) {
+   
+        cout<<"Nombre del alumno"<<endl;
+        cin>>nombres[i];
+        cout<<"Matricula del alumno"<<endl;
+        cin>>matriculas[i];
+        cout<<"Especialidad del alumno"<<endl;
+        cin>>esp;
+     if (esp=='P'|| esp=='M'){
+        especialidades[i]=esp;
+     } else {
+         especialidades[i]='x';
+            cout<<"Especialidad invalida"<<endl;
+     }
+     }
+     break;
+   
+     case 2:
+        cout<<"Inserte su especialidad"<<endl;
+        cout<<"P"<<endl;
+        cout<<"M"<<endl;
+        cin>>opp;
+       
+    if(opp=="P"){
+    for (int i = 0; i < 5; i++) {
+        especialidades[i];
+    if(especialidades[i]=='P'){
+        cout<<"Datos de alumnos que cumplen con la especialidad solicitada"<<endl;
+        cout<<" "<<nombres[i];
+        cout<<" "<<matriculas[i];
+        cout<<" "<<especialidades[i]<<endl;
+    } else {
+        cout<<"Especialidad invalida"<<endl;
+    }
+    }
+    } else {
+    if(opp=="M")
+    for (int i = 0; i < 5; i++) {
+        especialidades[i];
+    if(especialidades[i]=='M'){
+        cout<<"Datos de alumnos que cumplen con la especialidad solicitada"<<endl;
+        cout<<" "<<nombres[i];
+        cout<<" "<<matriculas[i];
+        cout<<" "<<especialidades[i]<<endl;
+    } else {
+        cout<<"Especialidad invalida"<<endl;
+    }
+    } else {
+        cout<<"Especialidad invalida"<<endl;
+    }
+     break;
+   
+     case 3:
+     for (int i = 0; i < 5; i++) {
+        cout<<"informacion de todos los alumnos "<<endl;
+        cout<<" "<<nombres[i];
+        cout<<" "<<matriculas[i];
+        cout<<" "<<especialidades[i]<<endl;
+     }
+     break;
+   
+     case 4:
+         cout<<"Haz decidido salir bye"<<endl;{
+     return 0;
+         }
+       
+     break;
+     default:
+        cout<<("No hubo coincidencias")<<endl;{
+     break;
+         }
+       }
+    }
+ }
+
+    while(eleccion > 0 and eleccion < 4);
+   
+     return 0;
+    }
